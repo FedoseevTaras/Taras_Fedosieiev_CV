@@ -186,6 +186,12 @@ h2 {
 .sobi-cmo__description {
   margin-top: 20px;
 }
+
+@media screen and (max-width: 1200px) {
+  .sobi-cmo_imgArrow {
+    margin-top: 20px;
+  }
+}
 .sobi-cmo__description {
   margin-top: 20 px;
   visibility: hidden;
