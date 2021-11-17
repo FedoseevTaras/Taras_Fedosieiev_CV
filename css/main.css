@@ -17,6 +17,7 @@ body {
 }
 ._container {
   max-width: 1600px;
+  min-width: 312px;
   margin: 0px auto;
 }
 .header__container {
@@ -55,6 +56,19 @@ h1 {
 .contacts_icons {
   width: 230px;
 }
+.contacts_icons_item {
+  width: 33px;
+  height: 33px;
+  transition: 0.5s;
+}
+.contacts_icons_item:hover {
+  width: 40px;
+  height: 40px;
+  margin-top: -7px;
+  margin-bottom: -7px;
+  margin-right: -7px;
+}
+
 .header__decoration {
   margin-top: 80px;
 }
@@ -96,17 +110,37 @@ h2 {
   letter-spacing: 0em;
   text-align: left;
 }
+@media screen and (max-width: 380px) {
+  h3 {
+    font-size: 15px;
+  }
+}
 .text-gray-decore {
   color: #8a8a8a;
 }
 .about ul li:not(:first-child) {
   margin-top: 40px;
 }
+
 .education ul li {
   margin-top: 40px;
 }
 .skills ul li {
   margin-top: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .about ul li:not(:first-child) {
+    margin-top: 20px;
+  }
+  .block__decoration__title {
+    margin-top: -20px;
+  }
+  .education ul li {
+    margin-top: 20px;
+  }
+  .skills ul li {
+    margin-top: 20px;
+  }
 }
 .skills__frameworks li:not(:first-child) {
   margin-top: 0px;
@@ -124,6 +158,22 @@ h2 {
 .work-experience__decoration {
   margin-top: 40px;
 }
+@media screen and (max-width: 1200px) {
+  .work-experience__decoration {
+    margin-top: 30px;
+  }
+  .work-experience {
+    margin-top: 20px;
+    line-height: 50px;
+  }
+  .work-experience h2 {
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  /* h2 {
+    line-height: 50px;
+  } */
+}
 .work-eperience__sobi-cmo {
   display: grid;
   grid-template-columns: 30% 60%;
@@ -139,12 +189,14 @@ h2 {
 .sobi-cmo__description {
   margin-top: 20 px;
   visibility: hidden;
+  height: 0;
   opacity: 0;
   transition: opacity 600ms, visibility 600ms;
 }
 .vissible {
   visibility: visible;
   opacity: 1;
+  height: 100%;
 }
 .rotate {
   transform: rotate(180deg);
